@@ -43,7 +43,7 @@ class _KalkulatorPageState extends State<KalkulatorPage> {
           // jika karakter terakhir adalah operator -> ganti operator terakhir
           String last = input[input.length - 1];
           if (_isOperator(last)) {
-            // izinkan mengganti operator terakhir
+            // mengganti operator terakhir
             input = input.substring(0, input.length - 1) + value;
           } else {
             input += value;
@@ -51,7 +51,6 @@ class _KalkulatorPageState extends State<KalkulatorPage> {
           return;
         }
       }
-
       // default: angka atau titik
       input += value;
     });
@@ -65,7 +64,7 @@ class _KalkulatorPageState extends State<KalkulatorPage> {
       String expr = exprRaw.replaceAll("x", "*").replaceAll("÷", "/");
       expr = expr.replaceAll("×", "*");
 
-      // tokenisasi karakter-per-karakter (mendukung unary minus)
+      // tokenisasi karakter-per-karakter
       List<String> numStrs = [];
       List<String> ops = [];
       String buf = "";
@@ -90,7 +89,6 @@ class _KalkulatorPageState extends State<KalkulatorPage> {
             buf = "";
           }
         } else {
-          // digit atau titik
           buf += c;
         }
       }
@@ -114,7 +112,7 @@ class _KalkulatorPageState extends State<KalkulatorPage> {
         numbers.add(v);
       }
 
-      // evaluasi kiri -> kanan
+      // kiri -> kanan
       double res = numbers[0];
       for (int i = 0; i < ops.length; i++) {
         String op = ops[i];
@@ -131,7 +129,7 @@ class _KalkulatorPageState extends State<KalkulatorPage> {
         }
       }
 
-      // formatting hasil: jika integer tampil tanpa .0, else hilangkan trailing zero
+      // Ngilangin trailing zero jika integer tanpa desimal
       String output;
       if (res == res.toInt()) {
         output = res.toInt().toString();
@@ -140,7 +138,7 @@ class _KalkulatorPageState extends State<KalkulatorPage> {
         output = res.toStringAsFixed(6).replaceFirst(RegExp(r'\.?0+$'), '');
       }
 
-      // rule: jika panjang hasil melebihi 6 => error
+      // jika panjang hasil melebihi 6 => error
       if (output.length > 6) return "Error: melebihi frame";
 
       return output;
