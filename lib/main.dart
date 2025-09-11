@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'menu/kalkulator.dart'; // langsung import kalkulator
+import 'menu/login.dart'; 
+import 'menu/data_kelompok.dart';
 
 void main() {
   runApp(MyApp());
