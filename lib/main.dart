@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'menu/kalkulator.dart'; // langsung import kalkulator
-import 'menu/login.dart'; 
-import 'menu/data_kelompok.dart';
+import 'menu/login.dart'; // ke login ??
+import 'menu/data_kelompok.dart'; //ke data kelompok ??
 
 void main() {
   runApp(MyApp());
