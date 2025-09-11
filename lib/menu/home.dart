@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'menu/data_kelompok.dart';
+import 'package:tugas1mobile/menu/kalkulator.dart';
+// import 'menu/data_kelompok.dart';
 // import 'menu/kalkulator.dart';
 import 'ganjil_genap.dart';
 // import 'menu/total_angka.dart';
@@ -55,8 +56,11 @@ class HomePage extends StatelessWidget {
               height: 80,
               child: ElevatedButton(
                 onPressed: () {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text("Kalkulator belum dibuat")),
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>  KalkulatorPage(),
+                    ),
                   );
                 },
                 child: const Text(
