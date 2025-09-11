@@ -122,7 +122,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-// halaman tujuan setelah login
+// halaman tujuan setelah login (belum diganti ma punya nansh)
 class HomePage extends StatelessWidget {
   final String username;
   const HomePage({super.key, required this.username});
@@ -140,3 +140,4 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
