@@ -122,22 +122,4 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-// halaman tujuan setelah login (belum diganti ma punya nansh)
-class HomePage extends StatelessWidget {
-  final String username;
-  const HomePage({super.key, required this.username});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("Home Page")),
-      body: Center(
-        child: Text(
-          "",
-          style: const TextStyle(fontSize: 24),
-        ),
-      ),
-    );
-  }
-}
 
