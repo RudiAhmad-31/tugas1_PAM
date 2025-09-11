@@ -15,7 +15,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
       ),
-      // langsung ke TotalAngkaPage
       home: const TotalAngkaPage(title: 'MENU JUMLAH TOTAL ANGKA'),
     );
   }
