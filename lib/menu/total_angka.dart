@@ -45,20 +45,25 @@ class _TotalAngkaPageState extends State<TotalAngkaPage> {
     });
   }
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-        centerTitle: true,
-        automaticallyImplyLeading: true, // back button otomatis kalau ada navigator
+ @override
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(
+      backgroundColor: const Color.fromARGB(255, 42, 126, 198),
+      title: Text(
+        widget.title,
+        style: const TextStyle(
+          color: Colors.black,
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+        ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
+      automaticallyImplyLeading: true, // back button otomatis
+    ),
+    body: Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: Column(
+        children: <Widget>[
             const Text(
               "Masukkan angka:",
               style: TextStyle(fontSize: 16),
@@ -94,3 +99,4 @@ class _TotalAngkaPageState extends State<TotalAngkaPage> {
     );
   }
 }
+
